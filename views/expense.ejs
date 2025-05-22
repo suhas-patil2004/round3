@@ -1,0 +1,42 @@
+<%- include('partials/header') %>
+
+<div class="container mt-5">
+  <h1>ADD EXPENSES</h1>
+
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+
+          <!-- Makes POST request to /login route -->
+          <form action="/expenses" method="POST">
+            <div class="form-group">
+              <label for="amount">AMOUNT</label>
+              <input type="number" class="form-control" name="amount">
+            </div>
+            <label for="categ">Category</label>
+          <select id="type" name="type">
+      <option value="credit">CREDIT</option>
+      <option value="debit">DEBIT</option>
+    </select>
+    <label for="categ">Category</label>
+    <select id="Category" name="category">
+      <option value="Food">FOOD</option>
+      <option value="Transport">TRANSPORT</option>
+      <option value="Shopping">SHOPPING</option>
+      <option value="Salary">SALARY</option>
+      
+    </select>
+            <button type="submit" class="btn btn-dark">ADD</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+ 
+    
+  </div>
+</div>
+
+<%- include('partials/footer') %>

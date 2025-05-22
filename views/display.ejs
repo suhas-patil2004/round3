@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+<div class="container mt-5">
+  <h1>Display</h1>
+
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+          <% if (expenses && expenses.length > 0) { %>
+            <ul class="list-group">
+              <% expenses.forEach(exp => { %>
+                <li class="list-group-item">
+                  <strong>Amount:</strong> <%= exp.amount %> |
+                  <strong>Type:</strong> <%= exp.type %> |
+                  <strong>Category:</strong> <%= exp.category %> |
+                  <strong>Date:</strong> <%= exp.date %>
+                </li>
+              <% }) %>
+            </ul>
+          <% } else { %>
+            <p>No expenses recorded yet.</p>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer') %>
